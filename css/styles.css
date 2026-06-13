@@ -1,0 +1,54 @@
+/* css/styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    transition: filter 0.4s ease;
+}
+
+/* Clase interactiva que activa el script JS de accesibilidad */
+.view-grayscale {
+    filter: grayscale(100%) !important;
+}
+
+/* Control estético para las 15 imágenes de la rejilla */
+.gallery-img {
+    height: 160px;
+    object-fit: cover;
+    background-color: #e9ecef;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.bg-dark-opacity {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Lightbox: asegurar que la imagen se ajuste a la ventana sin scroll */
+#lightboxImage {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: calc(100vh - 140px); /* deja espacio para botones y márgenes */
+    object-fit: contain;
+}
+
+.modal-body {
+    overflow: hidden; /* evitar scroll interno */
+}
+
+.modal-dialog {
+    max-width: 95vw; /* ocupar la mayor parte del ancho disponible */
+}
+
+/* Botones del lightbox más visibles */
+#lightboxPrev, #lightboxNext {
+    min-width: 110px;
+}
